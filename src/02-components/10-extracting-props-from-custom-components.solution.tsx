@@ -25,3 +25,12 @@ type test = Expect<
     }
   >
 >;
+
+//e.g
+
+const NavBarWrapper = (props: NavBarProps) => {
+  // const { title, links, children } = props;
+  return <>
+    <NavBar {...props} />
+  </>
+}

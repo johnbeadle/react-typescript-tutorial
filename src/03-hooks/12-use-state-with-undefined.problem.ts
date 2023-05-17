@@ -6,12 +6,14 @@ interface Data {
   name: string;
 }
 
+type MaybeData = Data | undefined
+
 const fetchData = () => {
   return Promise.resolve({ id: 1, name: "John" });
 };
 
 export const Component = () => {
-  const [data, setData] = useState();
+  const [data, setData] = useState<MaybeData>();
 
   useEffect(() => {
     fetchData().then((val) => {
